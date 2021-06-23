@@ -1,0 +1,78 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  /*
+   ** https://www.npmjs.com/package/eslint-import-resolver-typescript
+   ** we need an import resolver so that eslint could resolve typescript module paths
+   ** additionally we need to provide an ability to read .ts and .tsx files
+   ** as airbnb linter reads .js and jsx by default.
+   */
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    /*
+     ** We're providing a path to ts config
+     ** so that eslint could understand module pathing imports.
+     */
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "packages/**/tsconfig.json",
+          "applications/**/tsconfig.json"
+        ]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "jest"],
+  "rules": {
+    /*
+     ** this is required because of error in airbnb config
+     ** https://stackoverflow.com/a/59268871
+     */
+    "import/extensions": "off",
+    /*
+     ** Next.js imports React by default
+     ** we don't need to manually import react
+     */
+    "react/react-in-jsx-scope": "off",
+    /*
+     ** by default jsx-filename-extensions only support js files.
+     ** we need to overide with typescript support.
+     */
+    "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+    "import/no-default-export": "error",
+    "import/prefer-default-export": "off",
+    /* we're disabling this rule because typescript is already doing this for us */
+    "react/prop-types": "off",
+    /* this rule is not required for typescript projects */
+    "react/require-default-props": "off",
+    /* we need this line to import react testing library */
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.tsx", "**/*.test.ts"] }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/pages/**/*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

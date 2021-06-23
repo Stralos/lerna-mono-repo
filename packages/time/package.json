@@ -1,0 +1,14 @@
+{
+  "name": "@walnut/time",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@walnut/greeter": "*",
+    "moment": "^2.29.1",
+    "typescript": "^4.3.4"
+  }
+}
