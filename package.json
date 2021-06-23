@@ -1,0 +1,12 @@
+{
+  "name": "walnut",
+  "repository": "https://github.com/Stralos/lerna-mono-repo.git",
+  "private": true,
+  "workspaces": [
+    "applications/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
