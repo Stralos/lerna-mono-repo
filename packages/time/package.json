@@ -1,6 +1,6 @@
 {
   "name": "@walnut/time",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "private": true,
   "dependencies": {
-    "@walnut/greeter": "^2.0.0",
+    "@walnut/greeter": "^2.0.1",
     "moment": "^2.29.1",
     "typescript": "^4.3.4"
   }
