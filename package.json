@@ -6,9 +6,6 @@
     "packages": [
       "applications/*",
       "packages/*"
-    ],
-    "nohoist": [
-      "**"
     ]
   },
   "scripts": {
