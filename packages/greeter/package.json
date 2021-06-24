@@ -1,6 +1,6 @@
 {
   "name": "@walnut/greeter",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist",
   "license": "MIT",
   "scripts": {
