@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {greetWithTime(new Date(), { name: "James", lastName: "Smith" })}
-      <footer>Add footer @Company name</footer>
     </div>
   );
 }
