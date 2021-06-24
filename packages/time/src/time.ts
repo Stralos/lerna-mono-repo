@@ -7,5 +7,6 @@ export function getDate(date: Date) {
 }
 
 export function greetWithTime(date: Date, user: User) {
+  // return `${getDate(date)}: ${user.name} ${user.lastName}`
   return `${greeter(user)}. Current time is ${getDate(date)}`;
 }
