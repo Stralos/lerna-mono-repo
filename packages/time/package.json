@@ -8,6 +8,7 @@
   },
   "private": true,
   "dependencies": {
+    "@walnut/models": "*",
     "@walnut/greeter": "^2.0.1",
     "moment": "^2.29.1",
     "typescript": "^4.3.4"
