@@ -6,6 +6,9 @@
   "scripts": {
     "build": "tsc"
   },
+  "dependencies": {
+    "@walnut/models": "*"
+  },
   "private": true,
   "devDependencies": {
     "typescript": "^4.3.4"
